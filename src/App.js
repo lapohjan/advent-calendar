@@ -30,13 +30,26 @@ function App() {
 
   /**/
 
-  const handleFlipHatch = id => {
+
+  const handleFlipHatch = (id, date) => {
+
+    const today = new Date();
+    console.log(today);
+    console.log(date);
+    
+
+
+    
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id ? { ...hatch, open: !hatch.open } : hatch
+      hatch.id === id && date === today ? { ...hatch, open: !hatch.open } : hatch
     );
-    setHatches(updatedHatches)
-    console.log(id)
+    setHatches(updatedHatches);
+    console.log(id);
   }
+
+  
+
+
   return (
     <>
       <GlobalStyle />
@@ -46,7 +59,6 @@ function App() {
             key={hatch.id}
             hatchData={hatch}
             handleClick={handleFlipHatch}
-
           />)}
       </StyledApp>
 
