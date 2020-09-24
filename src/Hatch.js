@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyledHatch } from './HatchStyles'
 
-const Hatch = ({ hatchData: { id, nr, day, text, img, open }, handleClick }) => (
-    <StyledHatch background={img} onClick={() => handleClick(id, day)}>
+const Hatch = ({ hatchData: { id, nr, text, img, open }, handleClick }) => (
+    <StyledHatch background={img} onClick={() => handleClick(id)}>
         <div className={open ? "front open" : "front"}>
             <p>{nr}</p>
         </div>
