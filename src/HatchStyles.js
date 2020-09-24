@@ -54,7 +54,7 @@ cursor: pointer;
     }
 }
 
-> div {
+.hatch {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,5 +67,46 @@ cursor: pointer;
     box-sizing: border-box;
 
 }
+
+
+#overlay {
+  position: fixed;
+  display: none;
+  justify-items:center;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(117,54,81,0.5);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.hatch-content {
+    
+        width: 50%;
+        height: 50%;
+        border: solid black 1px;
+        color: black;
+        background: orange;
+        border-radius: 5px;
+        box-shadow: 0 0 5px black; 
+        position: relative;       
+}
+
+.closebutton {
+    background: yellow;
+    border-radius: 5px;
+    padding: 5px;
+    border: black solid 1px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Audiowide', cursive;
+    font-weight: lighter;
+    font-size: small;
+}
+
 
 `
