@@ -70,17 +70,17 @@ cursor: pointer;
 
 
 #overlay {
-  position: fixed;
-  display: none;
-  justify-items:center;
-  align-items:center;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(117,54,81,0.5);
-  z-index: 3;
-  cursor: pointer;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    cursor: pointer;
 }
 
 .hatch-content {
@@ -89,10 +89,17 @@ cursor: pointer;
         height: 50%;
         border: solid black 1px;
         color: black;
-        background: orange;
+   
         border-radius: 5px;
         box-shadow: 0 0 5px black; 
-        position: relative;       
+        position: absolute;    
+        padding: 2rem;
+        top: 50%;
+        left: 50%;
+        font-size: 20px;
+        color: white;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);   
 }
 
 .closebutton {

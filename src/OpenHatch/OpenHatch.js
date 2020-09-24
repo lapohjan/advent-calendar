@@ -8,11 +8,12 @@ function overlayOff() {
 const OpenHatch = ({ hatchData: { img, text } }) => (
     <StyledHatch background={img}>
 
-
-        <div onClick={overlayOff} id="overlay">
+<div id="overlay" >
             <div className="hatch-content">
-                <p>{text}</p>
+                <h1 background={img}>hello! {text}</h1>
+                <button className="closebutton" onClick={overlayOff}>close</button>
             </div>
+
         </div>
 
 

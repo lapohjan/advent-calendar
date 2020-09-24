@@ -51,7 +51,6 @@ function App() {
             hatchData={hatch}
             handleClick={handleFlipHatch}
 
-
           />)}
         {/*    {hatches.map(hatch =>
           <OpenHatch
