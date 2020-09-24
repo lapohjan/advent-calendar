@@ -11,15 +11,12 @@ const shuffle = a => {
     return a;
 };
 
-export const date = new Date('Sep 24');
-
 
 // Bad one-liners from https://onelinefun.com/christmas
 export const hatchArray = [
     {
         id: "hatch-1",
         nr: 1,
-        date: date,
         img: "./img/xmas2.jpg",
         text:
             "Can I have your picture so I can show Santa what I want for Christmas?",
