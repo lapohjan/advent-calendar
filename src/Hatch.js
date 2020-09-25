@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyledHatch } from './HatchStyles'
 
-const overlayOn = () => {
+const overlayOn = (text) => {
     document.getElementById("overlay").style.display = "block";
+    document.getElementById("overlayText").innerHTML = text
+
 
 }
 
@@ -17,11 +19,11 @@ const Hatch = ({ hatchData: { id, nr, text, img, open }, handleClick }) => (
         </div>
         <div className={open ? "back hatch open" : "hatch back"}>
             <p onClick={() => handleClick(id)}>{text}</p>
-            <button onClick={overlayOn}>show overlay</button>
+            <button className="overlay-btn" onClick={() => overlayOn(text)}>show overlay</button>
         </div>
         <div id="overlay" >
             <div className="hatch-content">
-                <h1 background={img}>hello! {text}</h1>
+                <p background={img} id="overlayText"></p>
                 <button className="closebutton" onClick={overlayOff}>close</button>
             </div>
 

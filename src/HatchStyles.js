@@ -68,6 +68,22 @@ cursor: pointer;
 
 }
 
+.overlay-btn, .closebutton {
+
+    background: rgba(0, 177, 106, 1);
+    border-radius: 5px;
+    padding: 5px;
+    border: black solid 1px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Audiowide', cursive;
+    font-weight: lighter;
+    font-size: small;
+
+
+}
+
 
 #overlay {
     position: fixed;
@@ -89,7 +105,7 @@ cursor: pointer;
         height: 50%;
         border: solid black 1px;
         color: black;
-   
+   background: rgba(200, 247, 197, 0.9);
         border-radius: 5px;
         box-shadow: 0 0 5px black; 
         position: absolute;    
@@ -97,23 +113,12 @@ cursor: pointer;
         top: 50%;
         left: 50%;
         font-size: 20px;
-        color: white;
+        color: black;
         transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);   
 }
 
-.closebutton {
-    background: yellow;
-    border-radius: 5px;
-    padding: 5px;
-    border: black solid 1px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-family: 'Audiowide', cursive;
-    font-weight: lighter;
-    font-size: small;
-}
+
 
 
 `

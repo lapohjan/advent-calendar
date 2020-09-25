@@ -52,14 +52,6 @@ function App() {
             handleClick={handleFlipHatch}
 
           />)}
-        {/*    {hatches.map(hatch =>
-          <OpenHatch
-            key={hatch.id}
-            hatchData={hatch}
-
-
-          />)} */}
-
 
       </StyledApp>
 
