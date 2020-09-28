@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledHatch } from './HatchStyles'
 
 const Hatch = ({ hatchData: { id, nr, text, img, open }, handleClick }) => (
-    <StyledHatch background={img} onClick={() => handleClick(id)}>
+    <StyledHatch background={img} onClick={() => handleClick(nr)}>
         <div className={open ? "front open" : "front"}>
             <p>{nr}</p>
         </div>

@@ -31,23 +31,21 @@ function App() {
   /**/
 
 
-  const handleFlipHatch = (id) => {
+  const handleFlipHatch = (nr) => {
    
     const today = new Date();
     const thisDay = today.getDate();
 
     // console.log(today);
-    // console.log(thisDay);
-    const hatchDay = 'hatch-' + thisDay
-    console.log(hatchDay);
+    console.log(thisDay);
     
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id &&  hatch.id === hatchDay
+      hatch.nr === nr &&  hatch.nr <= thisDay
       ? { ...hatch, open: !hatch.open } : hatch
       );
 
     setHatches(updatedHatches);
-    console.log(id);
+    console.log(nr);
    
   }
 
