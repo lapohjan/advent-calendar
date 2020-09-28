@@ -23,7 +23,7 @@ const Hatch = ({ hatchData: { id, nr, text, img, open }, handleClick }) => (
         </div>
         <div id="overlay" >
             <div className="hatch-content">
-                <p background={img} id="overlayText"></p>
+                <p id="overlayText"></p>
                 <button className="closebutton" onClick={overlayOff}>close</button>
             </div>
 

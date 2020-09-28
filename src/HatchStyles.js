@@ -80,10 +80,7 @@ cursor: pointer;
     font-family: 'Audiowide', cursive;
     font-weight: lighter;
     font-size: small;
-
-
 }
-
 
 #overlay {
     position: fixed;
@@ -105,7 +102,7 @@ cursor: pointer;
         height: 50%;
         border: solid black 1px;
         color: black;
-   background: rgba(200, 247, 197, 0.9);
+        background: rgba(200, 247, 197, 0.9);
         border-radius: 5px;
         box-shadow: 0 0 5px black; 
         position: absolute;    
@@ -113,7 +110,6 @@ cursor: pointer;
         top: 50%;
         left: 50%;
         font-size: 20px;
-        color: black;
         transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);   
 }
