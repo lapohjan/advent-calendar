@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import { StyledApp } from './AppStyles'
 import { createCalendar } from './helpers'
 import Hatch from './Hatch';
-import OpenHatch from './OpenHatch/OpenHatch';
+
 
 
 const GlobalStyle = createGlobalStyle`
