@@ -54,7 +54,7 @@ cursor: pointer;
     }
 }
 
-> div {
+.hatch {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,5 +67,54 @@ cursor: pointer;
     box-sizing: border-box;
 
 }
+
+.overlay-btn, .closebutton {
+
+    background: rgba(0, 177, 106, 1);
+    border-radius: 5px;
+    padding: 5px;
+    border: black solid 1px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Audiowide', cursive;
+    font-weight: lighter;
+    font-size: small;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.hatch-content {
+    
+        width: 50%;
+        height: 50%;
+        border: solid black 1px;
+        color: black;
+        background: rgba(200, 247, 197, 0.9);
+        border-radius: 5px;
+        box-shadow: 0 0 5px black; 
+        position: absolute;    
+        padding: 2rem;
+        top: 50%;
+        left: 50%;
+        font-size: 20px;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);   
+}
+
+
+
 
 `

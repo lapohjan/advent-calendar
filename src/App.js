@@ -5,6 +5,7 @@ import { createCalendar } from './helpers'
 import Hatch from './Hatch';
 
 
+
 const GlobalStyle = createGlobalStyle`
 body {
   background:  center / cover url('https://source.unsplash.com/7VOyZ0-iO0o')  ;
@@ -24,6 +25,7 @@ function App() {
       : createCalendar();
 
     setHatches(calendar);
+
   }, []);
 
   // store calendar in local storage
@@ -65,6 +67,7 @@ function App() {
             hatchData={hatch}
             handleClick={handleFlipHatch}
           />)}
+
       </StyledApp>
 
     </>
