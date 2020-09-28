@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import { StyledApp } from './AppStyles'
 import { createCalendar } from './helpers'
 import Hatch from './Hatch';
+import Snow from './Snow';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -42,7 +43,7 @@ function App() {
     // console.log(month);
     
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id &&  hatch.nr <= thisDay && month == 8
+      hatch.id === id &&  hatch.nr <= thisDay && month === 8
       ? { ...hatch, open: !hatch.open } : hatch
       );
 
@@ -58,6 +59,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <Snow/>
       <StyledApp>
         {hatches.map(hatch =>
           <Hatch
