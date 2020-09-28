@@ -37,12 +37,12 @@ function App() {
     const thisDay = today.getDate();
 
     // console.log(today);
-    console.log(thisDay);
-    const thatDay = 'hatch-' + thisDay
-    console.log(thatDay);
+    // console.log(thisDay);
+    const hatchDay = 'hatch-' + thisDay
+    console.log(hatchDay);
     
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id && hatch.id === thatDay
+      hatch.id === id &&  hatch.id === hatchDay
       ? { ...hatch, open: !hatch.open } : hatch
       );
 
