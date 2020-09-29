@@ -3,6 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 import { StyledApp } from './AppStyles'
 import { createCalendar } from './helpers'
 import Hatch from './Hatch';
+import firebase from './firebase';
+
 
 
 const GlobalStyle = createGlobalStyle`
@@ -13,6 +15,7 @@ body {
 
 function App() {
   const [hatches, setHatches] = useState([]);
+  // const [dbData, setdbData] = useState();
 
   useEffect(() => {
     hatches.length && localStorage.setItem('calendar', JSON.stringify(hatches));
@@ -24,11 +27,54 @@ function App() {
       : createCalendar();
 
     setHatches(calendar);
+   
   }, []);
 
   // store calendar in local storage
 
   /**/
+
+  // const fromDb= firebase.firestore().collection("calendar-1");
+
+  useEffect(()=>{
+    return ()=>{
+     firebase.firestore().collection("calendar-1").get().then((snapshot)=>{
+       const data = snapshot.docs.map((doc)=> ({
+              id: doc.id, ...doc.data()
+                           
+            }));          
+              setHatches(data) 
+                    
+          });
+  }}, []);
+  
+
+//  fromDb.get().then((snapshot)=>{
+//       console.log(fromDb)
+//       const data = snapshot.docs.map((doc)=> ({
+//         id: doc.id, ...doc.data()
+        
+        
+//       }));
+//       console.log("All the data from firestore", data)
+//       // setHatches(data);
+      
+//     });
+
+// const getData = () => {
+//     fromDb.get().then(function(querySnapshot) {
+//       const newHatches= [];
+//       querySnapshot.forEach(function(doc){
+//         console.log(doc.id, " => ", doc.data());
+//         newHatches.push(doc.data());
+//       });
+//       console.log("This is new hatches", newHatches);
+//       });
+//   };
+  
+  // setHatches(getData());
+
+
 
   const handleFlipHatch = id => {
     const updatedHatches = hatches.map(hatch =>
@@ -36,6 +82,7 @@ function App() {
     );
     setHatches(updatedHatches)
     console.log(id)
+    
   }
   return (
     <>
