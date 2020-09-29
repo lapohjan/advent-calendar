@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { StyledApp } from './AppStyles'
 import { createCalendar } from './helpers'
+// import './App.scss';
 import Hatch from './Hatch';
 
 
@@ -57,10 +58,10 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
-      <StyledApp>
+      <GlobalStyle id="globalstyle" />
+      <StyledApp id="styledapp">
         {hatches.map(hatch =>
-          <Hatch
+          <Hatch id="hatch"
             key={hatch.id}
             hatchData={hatch}
             handleClick={handleFlipHatch}
