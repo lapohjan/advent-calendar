@@ -1,24 +1,24 @@
-#styledapp {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    padding: 40px;
-}
-
-#globalstyle {
+.globalstyle {
     body {
         background:  center / cover url('https://source.unsplash.com/7VOyZ0-iO0o')  ;
         margin: 0;
     }
 }
 
-#hatch {
+.styledapp {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 40px;
+}
+
+.hatch {
     padding-top: 100%;
     position: relative;
     cursor: pointer;
 
     .front {
-        // background: center / cover url(${props => props.background});
+        background: center / cover url('./img/front.jpg');
         position: absolute;
         top: 0;
         z-index: 2;
@@ -45,7 +45,7 @@
 
     .back {
         position: absolute;
-        background: center / cover url(${hatchBackdrop});
+        background: center / cover url('./img/xmas1.jpg');
         top: 0px;
         left: 0px;
         z-index: 1;
