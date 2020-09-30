@@ -23,9 +23,7 @@ function App() {
   const [hatches, setHatches] = useState([]);
   // const [dbData, setdbData] = useState();
 
-  /*   useEffect(() => {
-      hatches.length && localStorage.setItem('calendar', JSON.stringify(hatches));
-    }, [hatches])
+  /*
   
     useEffect(() => {
       const calendar = localStorage.calendar
@@ -48,12 +46,22 @@ function App() {
       const data = snapshot.docs.map((doc) => ({
         id: doc.id, ...doc.data()
 
+
       }));
       setHatches(shuffle(data))
+      const calendar = localStorage.calendar
+        ? JSON.parse(localStorage.calendar)
+        : hatches;
+
+      setHatches(calendar);
 
     });
 
   }, []);
+
+  useEffect(() => {
+    hatches.length && localStorage.setItem('calendar', JSON.stringify(hatches));
+  }, [hatches])
 
 
   //  fromDb.get().then((snapshot)=>{
