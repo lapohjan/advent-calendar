@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import { StyledApp } from './AppStyles'
 import { createCalendar } from './helpers'
 import Hatch from './Hatch';
+import Header from './Header';
 
 
 
@@ -60,6 +61,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <Header/>
       <StyledApp>
         {hatches.map(hatch =>
           <Hatch
