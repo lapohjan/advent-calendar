@@ -42,7 +42,7 @@ function App() {
     // console.log(month);
     
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id &&  hatch.nr <= thisDay && month == 8
+      hatch.id === id &&  hatch.nr <= thisDay && month === 8
       ? { ...hatch, open: !hatch.open } : hatch
       );
 
