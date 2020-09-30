@@ -5,6 +5,7 @@ import { createCalendar } from './helpers'
 import Hatch from './Hatch';
 
 
+
 const GlobalStyle = createGlobalStyle`
 body {
   background:  center / cover url('https://source.unsplash.com/7VOyZ0-iO0o')  ;
@@ -24,6 +25,7 @@ function App() {
       : createCalendar();
 
     setHatches(calendar);
+
   }, []);
 
   // store calendar in local storage
@@ -31,8 +33,8 @@ function App() {
   /**/
 
 
-  const handleFlipHatch = (id,nr) => {
-   
+  const handleFlipHatch = (id, nr) => {
+
     const today = new Date();
     const thisDay = today.getDate();
     const month = today.getMonth();
@@ -40,19 +42,19 @@ function App() {
     // console.log(today);
     // console.log(thisDay);
     // console.log(month);
-    
+
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id &&  hatch.nr <= thisDay && month === 8
-      ? { ...hatch, open: !hatch.open } : hatch
-      );
+      hatch.id === id && hatch.nr <= thisDay && month === 8
+        ? { ...hatch, open: !hatch.open } : hatch
+    );
 
     setHatches(updatedHatches);
     console.log(nr);
     console.log(id);
-   
+
   }
 
-  
+
 
 
   return (
@@ -65,6 +67,7 @@ function App() {
             hatchData={hatch}
             handleClick={handleFlipHatch}
           />)}
+
       </StyledApp>
 
     </>
