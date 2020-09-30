@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import './Header.css'
 
 
@@ -13,6 +13,7 @@ import './Header.css'
 
 
 const useAudio = () => {
+// Little idea -song: www.bensound.com
 //   const [audio] = useState(new Audio('/assets/bensound-littleidea.mp3'));
   const [audio] = useState(new Audio('/assets/geoff-hurly-have-a-happy-christmas.mp3'));
   const [playing, setPlaying] = useState(false);
@@ -33,20 +34,21 @@ const useAudio = () => {
 };
 
 const Header = () => {
+// Little idea -song: www.bensound.com
 //   const [playing, toggle] = useAudio('/assets/bensound-littleidea.mp3');
   const [playing, toggle] = useAudio('/assets/geoff-hurly-have-a-happy-christmas.mp3');
   return (
-     <>
-            {/* <FontAwesomeIcon */}
-            <button
+     <div className="header">
+      {/* <button */}
+            <FontAwesomeIcon
               onClick={toggle}
               className="far music"
-            //   icon={faMusic}
+              icon={faMusic}
             >
               {playing ? 'Pause' : 'Play'}
-            </button>
-            {/* </FontAwesomeIcon> */}
-    </>
+            {/* </button> */}
+            </FontAwesomeIcon>
+    </div>
   );
 };
 
