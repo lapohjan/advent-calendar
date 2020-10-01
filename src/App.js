@@ -38,12 +38,12 @@ function App() {
     const thisDay = today.getDate();
     const month = today.getMonth();
 
-    // console.log(today);
-    // console.log(thisDay);
-    // console.log(month);
+    console.log(today);
+    console.log(thisDay);
+    console.log(month);
     
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id &&  hatch.nr <= thisDay && month === 8
+      hatch.id === id &&  hatch.nr <= thisDay && month === 9
       ? { ...hatch, open: !hatch.open } : hatch
       );
 

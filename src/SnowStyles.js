@@ -2,6 +2,15 @@ import styled from 'styled-components';
 
 export const StyledSnow = styled.div`
     /* customizable snowflake styling */
+    
+    .snowflakes {
+        display: block;
+    }
+
+    .noSnowflakes {
+        display: none;
+    }
+    
     .snowflake {
     color: #fff;
     font-size: 1em;
