@@ -34,32 +34,33 @@ function App() {
 
   /**/
 
-  // const fromDb= firebase.firestore().collection("calendar-1");
+  const fromDb= firebase.firestore().collection("calendar-1");
 
-  useEffect(()=>{
-    return ()=>{
-     firebase.firestore().collection("calendar-1").get().then((snapshot)=>{
-       const data = snapshot.docs.map((doc)=> ({
-              id: doc.id, ...doc.data()
+  // useEffect(()=>{
+  //   return ()=>{
+  //    firebase.firestore().collection("calendar-1").get().then((snapshot)=>{
+  //      const data = snapshot.docs.map((doc)=> ({
+  //             id: doc.id, ...doc.data()
                            
-            }));          
-              setHatches(data) 
+  //           }));          
+  //             setHatches(data) 
                     
-          });
-  }}, []);
+  //         });
+  // }}, []);
   
 
-//  fromDb.get().then((snapshot)=>{
-//       console.log(fromDb)
-//       const data = snapshot.docs.map((doc)=> ({
-//         id: doc.id, ...doc.data()
+ fromDb.get().then((snapshot)=>{
+      console.log(fromDb)
+      const data = snapshot.docs.map((doc)=> ({
+        id: doc.id, ...doc.data()
         
         
-//       }));
-//       console.log("All the data from firestore", data)
-//       // setHatches(data);
+      }));
+      console.log("All the data from firestore", data);
+      console.log(hatches)
+      // setHatches(data);
       
-//     });
+    });
 
 // const getData = () => {
 //     fromDb.get().then(function(querySnapshot) {

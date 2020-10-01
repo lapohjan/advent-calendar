@@ -3,6 +3,8 @@
  * Shuffles array in place. ES6 version
  * @param {Array} a - An array containing the items.
  */
+import firebase from './firebase';
+
 const shuffle = a => {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -207,4 +209,47 @@ export const hatchArray = [
     },
 ];
 
-export const createCalendar = () => shuffle(hatchArray);
+
+// const getData = () => {
+//     firebase.firestore().collection("calendar-1").get().then(function(querySnapshot) {
+//           const newHatches= [];
+//           querySnapshot.forEach(function(doc){
+//             console.log(doc.id, " => ", doc.data());
+//             newHatches.push(doc.data());
+//           });
+//           console.log("This is new hatches", newHatches);
+//           return newHatches;
+//           });
+//           console.log(newHatches)
+//       };
+
+//       const newHatchArray = getData();
+
+// var docRef = db.collection("cities").doc("SF");
+const fromDb= firebase.firestore().collection("calendar-1");
+// const newHatchData = 
+// fromDb.get().then(function(querySnapshot) {
+//           const newHatches= [];
+//           querySnapshot.forEach(function(doc){
+//             console.log(doc.id, " => ", doc.data());
+//             newHatches.push(doc.data());
+//           });
+//           console.log("This is new hatches", newHatches);
+//           return newHatches;
+//           });
+
+const newHatchData = 
+fromDb.get().then((snapshot)=>{
+    console.log(fromDb)
+    const data = snapshot.docs.map((doc)=> ({
+      id: doc.id, ...doc.data()
+      
+      
+    }));
+    console.log("All the data from firestore", data)
+    // setHatches(data);
+    return data;
+    
+  });
+
+export const createCalendar = () => shuffle(newHatchData);
