@@ -15,7 +15,7 @@ function overlayOff() {
 const Hatch = ({ hatchData: { id, nr, text, overlay, img, open }, handleClick }) => (
     <StyledHatch background={img}>
         <div onClick={() => handleClick(id)} className={open ? "front hatch open" : "front hatch"}>
-            <p >{nr}</p>
+            <p >{id}</p>
         </div>
         <div className={open ? "back hatch open" : "hatch back"}>
             <p onClick={() => handleClick(id)}>{text}</p>

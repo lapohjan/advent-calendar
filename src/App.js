@@ -91,17 +91,27 @@ function App() {
   // setHatches(getData());
 
 
+  const handleFlipHatch = (id) => {
 
+    /*  const today = new Date();
+     const thisDay = today.getDate();
+     const month = today.getMonth(); */
 
-  const handleFlipHatch = id => {
+    // console.log(today);
+    // console.log(thisDay);
+    // console.log(month);
+
     const updatedHatches = hatches.map(hatch =>
-      hatch.id === id ? { ...hatch, open: !hatch.open } : hatch
+      hatch.id === id /* && hatch.id <= thisDay && month === 9 */
+        ? { ...hatch, open: !hatch.open } : hatch
     );
-    setHatches(updatedHatches)
 
-    console.log(id)
+    setHatches(updatedHatches);
+    /*     console.log(nr);
+        console.log(id); */
 
   }
+
   return (
     <>
       <GlobalStyle />
