@@ -13,6 +13,7 @@ const shuffle = a => {
   return a;
 };
 
+
 const GlobalStyle = createGlobalStyle`
 body {
   background:  center / cover url('https://source.unsplash.com/7VOyZ0-iO0o')  ;
@@ -91,11 +92,13 @@ function App() {
 
 
 
+
   const handleFlipHatch = id => {
     const updatedHatches = hatches.map(hatch =>
       hatch.id === id ? { ...hatch, open: !hatch.open } : hatch
     );
     setHatches(updatedHatches)
+
     console.log(id)
 
   }
@@ -110,6 +113,7 @@ function App() {
             handleClick={handleFlipHatch}
 
           />)}
+
       </StyledApp>
 
     </>
