@@ -1,0 +1,8 @@
+.far.music {
+    font-size: 1.2rem;
+    color: #ffff;
+    height: 2.6rem;
+    cursor: pointer;
+    position: fixed;
+    right: 3rem;
+}
