@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import React, { useState, useEffect } from 'react'
+import { createGlobalStyle } from 'styled-components'
 import { StyledApp } from './AppStyles'
 import { createCalendar } from './helpers'
-import Hatch from './Hatch';
-import Snow from './Snow';
-
+import Hatch from './Hatch'
+import Header from './Header'
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -59,7 +58,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Snow/>
+      <Header/>
       <StyledApp>
         {hatches.map(hatch =>
           <Hatch
