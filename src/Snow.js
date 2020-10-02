@@ -13,9 +13,8 @@ const Snow = () => {
                 onClick={() => {
                 setSnowing(!snowing);
                 }}
-                className="far.snowflake"
-                style={{color: "white"}}
                 icon={faSnowflake}
+                className="farSnowflake"
             >
                 Snow!
             </FontAwesomeIcon>
