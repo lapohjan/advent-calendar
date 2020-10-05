@@ -41,23 +41,23 @@ function App() {
 
   // const fromDb= firebase.firestore().collection("calendar-1");
 
+
   useEffect(() => {
-
-    firebase.firestore().collection("calendar-1").get().then((snapshot) => {
-      const data = snapshot.docs.map((doc) => ({
-        id: doc.id, ...doc.data()
-
-
-      }));
-      setHatches(shuffle(data))
-      const calendar = localStorage.calendar
-        ? JSON.parse(localStorage.calendar)
-        : hatches;
-
-      setHatches(calendar);
-
-    });
-
+    let calendar = [];
+    if (localStorage.calendar !== undefined) {
+      calendar = JSON.parse(localStorage.calendar)
+    }
+    else {
+      firebase.firestore().collection("calendar-1").get().then((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id, ...doc.data(),
+        }));
+        setHatches(shuffle(data));
+      }
+      )
+      calendar = hatches;
+    };
+    setHatches(calendar);
   }, []);
 
   useEffect(() => {
