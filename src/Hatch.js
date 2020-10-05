@@ -2,9 +2,11 @@ import React from 'react';
 import { StyledHatch } from './HatchStyles'
 
 const overlayOn = (overlay, popupImg) => {
-    document.getElementById("overlay").style.display = "grid";
+    document.getElementById("overlay").style.display = "block";
+
     document.getElementById("overlayText").innerHTML = overlay
-    document.getElementById("popup-img").innerHTML = popupImg
+
+    document.getElementById("popup-img").src = popupImg
 }
 
 const overlayOff = () => {
@@ -18,12 +20,12 @@ const Hatch = ({ hatchData: { id, nr, text, overlay, img, open, popupImg }, hand
         </div>
         <div className={open ? "back hatch open" : "hatch back"}>
             <p onClick={() => handleClick(id)}>{text}</p>
-            <button className="overlay-btn" onClick={() => overlayOn(overlay, popupImg)}>show overlay</button>
+            <button className="overlay-btn" onClick={() => overlayOn(overlay, popupImg)}>show it</button>
         </div>
         <div id="overlay" >
             <div className="hatch-content">
                 <p id="overlayText"></p>
-                <div className="popup-image" id="popup-img"></div>
+                <img className="popup-image" id="popup-img" alt />
                 <button className="closebutton" onClick={overlayOff}>close</button>
             </div>
 

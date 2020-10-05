@@ -114,7 +114,12 @@ cursor: pointer;
         -ms-transform: translate(-50%,-50%);   
 }
 
-
+#popup-img {
+    position: absolute;
+    border: 2px solid black;
+    height: 30vh;
+ 
+}
 
 
 `
