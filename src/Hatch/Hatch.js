@@ -2,7 +2,8 @@ import React from 'react';
 import './Hatch.scss'
 
 const overlayOn = (overlay, popupImg) => {
-    document.getElementById("overlay").style.display = "block";
+    document.getElementById("overlay").style.display = "grid";
+
 
     document.getElementById("overlayText").innerHTML = overlay
 
