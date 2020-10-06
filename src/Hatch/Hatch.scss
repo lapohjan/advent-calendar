@@ -1,18 +1,24 @@
-import styled from 'styled-components';
-import hatchBackdrop from './img/xmas1.jpg'
-
-export const StyledHatch = styled.div`
-padding-top: 100%;
+.hatch-background {
+    padding-top: 100%;
 position: relative;
 cursor: pointer;
 
+}
+
 .front {
-    background: center / cover url(${props => props.background});
+    background: center/cover url('../img/xmas2.jpg');
     position: absolute;
     top: 0;
     z-index: 2;
 
-    p {
+    &.open {
+        transform: rotateY(180deg);
+    }
+
+
+}
+
+  .front  p {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,14 +33,11 @@ cursor: pointer;
         font-size: 4rem;
     }
 
-    &.open {
-        transform: rotateY(180deg);
-    }
-}
+  
 
 .back {
     position: absolute;
-    background: center / cover url(${hatchBackdrop});
+    background: center/cover url('../img/xmas12.jpg');
     top: 0px;
     left: 0px;
     z-index: 1;
@@ -47,7 +50,7 @@ cursor: pointer;
 
     p {
         font-family: "Dancing Script", cursive;
-        color: #fff;
+        color: black;
         padding: 10px;
         font-size: 1.4rem;
         text-align: center;
@@ -68,7 +71,7 @@ cursor: pointer;
 
 }
 
-.overlay-btn, .closebutton {
+%btn-shared {
 
     background: rgba(0, 177, 106, 1);
     border-radius: 5px;
@@ -80,6 +83,22 @@ cursor: pointer;
     font-family: 'Audiowide', cursive;
     font-weight: lighter;
     font-size: small;
+}
+
+.btn {
+    &-close {
+        @extend %btn-shared;
+        background-color: green;
+     
+        margin-top: 40px;
+
+    }
+    &-overlay {
+        @extend %btn-shared;
+        background-color: #B3000C;
+        font-size: small;
+       
+    }  
 }
 
 #overlay {
@@ -122,4 +141,3 @@ cursor: pointer;
 }
 
 
-`

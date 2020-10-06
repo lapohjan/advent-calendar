@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHatch } from './HatchStyles'
+import './Hatch.scss'
 
 const overlayOn = (overlay, popupImg) => {
     document.getElementById("overlay").style.display = "block";
@@ -14,24 +14,24 @@ const overlayOff = () => {
 }
 
 const Hatch = ({ hatchData: { id, nr, text, overlay, img, open, popupImg }, handleClick }) => (
-    <StyledHatch background={img}>
+    <div className="hatch-background" background={img}>
         <div onClick={() => handleClick(id)} className={open ? "front hatch open" : "front hatch"}>
             <p >{id}</p>
         </div>
         <div className={open ? "back hatch open" : "hatch back"}>
             <p onClick={() => handleClick(id)}>{text}</p>
-            <button className="overlay-btn" onClick={() => overlayOn(overlay, popupImg)}>show it</button>
+            <button className="btn btn-overlay" onClick={() => overlayOn(overlay, popupImg)}>show it</button>
         </div>
         <div id="overlay" >
             <div className="hatch-content">
                 <p id="overlayText"></p>
                 <img className="popup-image" id="popup-img" alt />
-                <button className="closebutton" onClick={overlayOff}>close</button>
+                <button className="btn btn-close" onClick={overlayOff}>close</button>
             </div>
 
         </div>
 
-    </StyledHatch>
+    </div>
 )
 
 

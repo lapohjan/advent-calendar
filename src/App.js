@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { createGlobalStyle } from 'styled-components';
-import { StyledApp } from './AppStyles'
+import './App.scss'
 // import { createCalendar } from './helpers'
-import Hatch from './Hatch';
+import Hatch from './Hatch/Hatch';
 import firebase from './firebase';
 
 const shuffle = a => {
@@ -14,33 +13,8 @@ const shuffle = a => {
 };
 
 
-const GlobalStyle = createGlobalStyle`
-body {
-  background:  center / cover url('https://source.unsplash.com/7VOyZ0-iO0o')  ;
-  margin: 0;
-}`
-
 function App() {
   const [hatches, setHatches] = useState([]);
-  // const [dbData, setdbData] = useState();
-
-  /*
-  
-    useEffect(() => {
-      const calendar = localStorage.calendar
-        ? JSON.parse(localStorage.calendar)
-        : createCalendar();
-  
-      setHatches(calendar);
-  
-    }, []); */
-
-  // store calendar in local storage
-
-  /**/
-
-  // const fromDb= firebase.firestore().collection("calendar-1");
-
 
   useEffect(() => {
     let calendar = [];
@@ -63,32 +37,6 @@ function App() {
   useEffect(() => {
     hatches.length && localStorage.setItem('calendar', JSON.stringify(hatches));
   }, [hatches])
-
-
-  //  fromDb.get().then((snapshot)=>{
-  //       console.log(fromDb)
-  //       const data = snapshot.docs.map((doc)=> ({
-  //         id: doc.id, ...doc.data()
-
-
-  //       }));
-  //       console.log("All the data from firestore", data)
-  //       // setHatches(data);
-
-  //     });
-
-  // const getData = () => {
-  //     fromDb.get().then(function(querySnapshot) {
-  //       const newHatches= [];
-  //       querySnapshot.forEach(function(doc){
-  //         console.log(doc.id, " => ", doc.data());
-  //         newHatches.push(doc.data());
-  //       });
-  //       console.log("This is new hatches", newHatches);
-  //       });
-  //   };
-
-  // setHatches(getData());
 
 
   const handleFlipHatch = (id) => {
@@ -114,8 +62,7 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
-      <StyledApp>
+      <div className="calendar">
         {hatches.map(hatch =>
           <Hatch
             key={hatch.id}
@@ -124,7 +71,7 @@ function App() {
 
           />)}
 
-      </StyledApp>
+      </div>
 
     </>
   );
