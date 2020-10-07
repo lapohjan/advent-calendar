@@ -3,7 +3,7 @@ import './App.scss'
 // import { createCalendar } from './helpers'
 import Hatch from './Hatch/Hatch';
 import firebase from './firebase';
-import Header from './Header'
+import Header from './Header/Header'
 
 const shuffle = a => {
   for (let i = a.length - 1; i > 0; i--) {
@@ -63,8 +63,9 @@ function App() {
 
   return (
     <>
+      < Header />
       <div className="calendar">
-        < Header />
+
         {hatches.map(hatch =>
           <Hatch
             key={hatch.id}

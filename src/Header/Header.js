@@ -1,14 +1,14 @@
 import React from 'react'
 import './Header.css'
-import Snow from './Snow'
-import Music from './Music'
+import Snow from '../Snow/Snow'
+import Music from '../Music/Music'
 
 
 const Header = () => {
   return (
     <>
-    <Music/>
-    <Snow/>
+      <Music />
+      <Snow />
     </>
   );
 };
