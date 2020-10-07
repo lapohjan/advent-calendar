@@ -1,23 +1,32 @@
-import styled from 'styled-components';
-import hatchBackdrop from './img/xmas1.jpg'
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-export const StyledHatch = styled.div`
-padding-top: 100%;
+.hatch-background {
+    padding-top: 100%;
 position: relative;
-cursor: pointer;
+
+
+}
 
 .front {
-    background: center / cover url(${props => props.background});
+    background: center/cover url('../img/xmas2.jpg');
     position: absolute;
     top: 0;
     z-index: 2;
 
-    p {
+    &.open {
+        transform: rotateY(180deg);
+    }
+
+
+}
+
+  .front  p {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: "Dancing Script", cursive;
-        color: #fff;
+        font-family: 'Courgette', cursive;
+        color: $color-light;
         padding: 20px;
         width: 50%;
         height: 50%;
@@ -27,14 +36,11 @@ cursor: pointer;
         font-size: 4rem;
     }
 
-    &.open {
-        transform: rotateY(180deg);
-    }
-}
+  
 
 .back {
     position: absolute;
-    background: center / cover url(${hatchBackdrop});
+    background: center/cover url('../img/xmas11.jpg');
     top: 0px;
     left: 0px;
     z-index: 1;
@@ -46,8 +52,9 @@ cursor: pointer;
     }
 
     p {
-        font-family: "Dancing Script", cursive;
-        color: #fff;
+        font-family: 'Courgette', cursive;
+        font-weight: 100;
+        color: $color-light;
         padding: 10px;
         font-size: 1.4rem;
         text-align: center;
@@ -63,23 +70,52 @@ cursor: pointer;
     transition: all 0.5s;
     transform-style: preserve-3d;
     border-radius: 20px;
-    border: 1px solid #fff;
+    border: 1px solid $color-light;
     box-sizing: border-box;
+    cursor: pointer;
+
+
 
 }
 
-.overlay-btn, .closebutton {
+%btn-shared {
 
-    background: rgba(0, 177, 106, 1);
     border-radius: 5px;
     padding: 5px;
-    border: black solid 1px;
+    border: $color-dark solid 1px;
     position: absolute;
     bottom: 10px;
     right: 10px;
-    font-family: 'Audiowide', cursive;
-    font-weight: lighter;
-    font-size: small;
+    font-family: 'Courgette', cursive;
+    font-size: large;
+    cursor: pointer;
+
+    &:hover {
+        background: rgb(0, 70, 23);
+
+    }
+
+}
+
+.btn {
+    &-close {
+        @extend %btn-shared;
+        background-color: green;
+     
+        margin-top: 40px;
+        &:hover {
+            color: $color-light
+        }
+
+    }
+    &-overlay {
+        @extend %btn-shared;
+        background-color: #B3000C;
+        color: $color-light
+
+        
+       
+    }  
 }
 
 #overlay {
@@ -93,28 +129,38 @@ cursor: pointer;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 3;
-    cursor: pointer;
+ 
 }
 
 .hatch-content {
+    display: grid;
+  
     
         width: 50%;
         height: 50%;
-        border: solid black 1px;
-        color: black;
-        background: rgba(200, 247, 197, 0.9);
+        border: solid $color-dark 1px;
+        color: $color-dark;
+        background: rgba(255, 103, 103, 0.9);
+        font-family: 'Courgette', cursive;
         border-radius: 5px;
-        box-shadow: 0 0 5px black; 
+        box-shadow: 0 0 5px $color-dark; 
         position: absolute;    
         padding: 2rem;
         top: 50%;
         left: 50%;
-        font-size: 20px;
+        font-size: x-large;
         transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);   
+}
+
+#popup-img {
+  
+    border: 2px solid $color-dark;
+    height: 30vh;
+  
+ 
 }
 
 
 
 
-`
