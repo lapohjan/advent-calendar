@@ -1,6 +1,9 @@
+@import '../variables';
+
+
 .farMusic {
     font-size: 1.2rem;
-    color: #ffff;
+    color: $color-light;
     height: 2.6rem;
     cursor: pointer;
     position: fixed;
