@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSnowflake } from '@fortawesome/free-solid-svg-icons';
-import './Snow.css'
+// import './Snow.css'
+import './Snow.scss'
 
 const Snow = () => {
     const [snowing, setSnowing] = useState(false);
