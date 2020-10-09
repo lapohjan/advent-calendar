@@ -5,6 +5,8 @@ const Footer = () => {
   return (
     <div className="footer">
       <p className="licence">Music: Have A Happy Christmas, Exzel Music Publishing (freemusicpublicdomain.com). Licensed under Creative Commons: By Attribution 3.0 http://creativecommons.org/licenses/by/3.0/</p>
+      <p className="licence"></p>
+      <p className="licence">Favicon: </p>
     </div>
   );
 };
