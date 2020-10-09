@@ -88,10 +88,12 @@ position: relative;
     right: 10px;
     font-family: 'Courgette', cursive;
     font-size: large;
+    background-color: $color-red;
     cursor: pointer;
-
+color: $color-light;
     &:hover {
-        background: rgb(0, 70, 23);
+        background: $color-green;
+        color: $color-light
 
     }
 
@@ -100,21 +102,11 @@ position: relative;
 .btn {
     &-close {
         @extend %btn-shared;
-        background-color: green;
-     
         margin-top: 40px;
-        &:hover {
-            color: $color-light
-        }
-
     }
     &-overlay {
         @extend %btn-shared;
-        background-color: #B3000C;
-        color: $color-light
 
-        
-       
     }  
 }
 
@@ -139,8 +131,8 @@ position: relative;
         width: 50%;
         height: auto;
         border: solid $color-dark 1px;
-        color: $color-dark;
-        background: rgba(255, 103, 103, 0.9);
+        color: $color-light;
+        background: rgba(206, 48, 48, 0.9);
         font-family: 'Courgette', cursive;
         border-radius: 5px;
         box-shadow: 0 0 5px $color-dark; 
@@ -169,10 +161,11 @@ position: relative;
 }
 
 a {
-    color: white;
+    color:  $color-dark;
     text-decoration: none;
+    font-weight: bold;
     &:hover {
-        color: rgb(29, 37, 29);
+        color: $color-green;
     }
 }
 
