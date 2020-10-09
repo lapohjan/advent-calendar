@@ -168,6 +168,14 @@ position: relative;
     
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: rgb(29, 37, 29);
+    }
+}
+
 
 
 
