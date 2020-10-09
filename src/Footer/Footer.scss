@@ -1,14 +1,17 @@
-@import '../variables';
-
 .footer {
-    height: 3rem;
     width: 100%;
-    background: $color-dark;
+    background: rgba(0, 0, 0, 0.692);
+    display: inline-flex;
+    position: absolute;
+    margin-bottom: 0;
     padding: 1rem;
+    // bottom: 0;
+
     .licence {
+        font-family: Arial, Helvetica, sans-serif;
         width: 33%;
         font-size: 11px;
-        color: $color-light;
+        color: rgb(211, 211, 211);
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
