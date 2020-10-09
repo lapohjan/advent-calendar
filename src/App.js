@@ -4,6 +4,7 @@ import './App.scss'
 import Hatch from './Hatch/Hatch';
 import firebase from './firebase';
 import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 const shuffle = a => {
   for (let i = a.length - 1; i > 0; i--) {
@@ -74,7 +75,7 @@ function App() {
           />)}
 
       </div>
-
+      <Footer/>
     </>
   );
 }
