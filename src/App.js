@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss'
-// import { createCalendar } from './helpers'
 import Hatch from './Hatch/Hatch';
 import firebase from './firebase';
 import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 const shuffle = a => {
   for (let i = a.length - 1; i > 0; i--) {
@@ -63,7 +63,7 @@ function App() {
 
   return (
     <>
-      < Header />
+      <Header/>
       <div className="calendar">
 
         {hatches.map(hatch =>
@@ -74,7 +74,7 @@ function App() {
           />)}
 
       </div>
-
+      <Footer/>
     </>
   );
 }
