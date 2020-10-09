@@ -137,7 +137,8 @@ position: relative;
   
     
         width: 50%;
-        height: 50%;
+        //new below
+        height: auto;
         border: solid $color-dark 1px;
         color: $color-dark;
         background: rgba(255, 103, 103, 0.9);
@@ -156,11 +157,24 @@ position: relative;
 #popup-img {
   
     border: 2px solid $color-dark;
-    height: 30vh;
+    max-height: 30vh;
+    //new below
+    max-width: 80%;
   
  
 }
 
 
-
-
+//new below
+@media only screen and (max-width: 450px){
+    .hatch-content{
+        width: 70vw;
+    }
+    #overlayText{
+        width:70vw;
+    }
+    // #popup-img{
+    //     width:70vw;
+    //     height: auto;
+    // }
+}
