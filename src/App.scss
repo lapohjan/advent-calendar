@@ -1,11 +1,13 @@
 .calendar {
     display: grid;
-grid-gap: 20px;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-padding: 40px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 40px;
+    margin-bottom: 2rem;
 }
 
 body {
     background:   url('./img/xmas19.jpg') no-repeat center/cover fixed ;
     margin: 0;
-  }
+    position: relative;
+  } 

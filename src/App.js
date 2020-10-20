@@ -72,7 +72,6 @@ function App() {
             hatchData={hatch}
             handleClick={handleFlipHatch}
           />)}
-
       </div>
       <Footer/>
     </>
