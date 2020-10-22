@@ -63,7 +63,7 @@ function App() {
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className="calendar">
 
         {hatches.map(hatch =>
@@ -74,7 +74,7 @@ function App() {
           />)}
 
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

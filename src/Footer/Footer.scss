@@ -1,16 +1,25 @@
 .footer {
-    width: 100%;
-    height: 30px;
+//  width: 100%;
+    height: 60px;
     background: rgba(0, 0, 0, 0.692);
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-
-    .licence {
-        font-family: Arial, Helvetica, sans-serif;
+   padding: 0.5rem 1rem;
+ 
+         font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         font-size: 11px;
         color: rgb(211, 211, 211);
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+
+  
 }
+
+.licence-2 {
+    margin: 0 10px;
+    color: rgb(0, 128, 0);
+}
+
+
+
+
