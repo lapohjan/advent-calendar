@@ -159,6 +159,12 @@ color: $color-light;
     }
     
 }
+@media only screen and (max-width:360px){
+  .footer {
+      width: 100%;
+  }
+    
+}
 
 a {
     color:  $color-dark;
