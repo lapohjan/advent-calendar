@@ -20,6 +20,22 @@
     color: rgb(0, 128, 0);
 }
 
+    
+
+@media only screen and (max-width:411px){
+  .footer {
+      width: 100%;
+      flex-direction: column;
+      height: 20vh;
+  }
+    
+}
+
+.img-link {
+    color: rgb(0, 128, 0);
+    text-decoration: underline;
+}
+
 
 
 
