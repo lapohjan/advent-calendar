@@ -1,1 +1,0 @@
-//Insert firebase details here
